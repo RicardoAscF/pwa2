@@ -52,6 +52,13 @@ option{
     vertical-align: text-bottom;
 }   
 
+a:hover{
+    background-color: #00BB75;
+    font-weight: bold;
+}
+
+
+
 .parisiene{
     font-family: 'Parisienne',cursive;
 }
