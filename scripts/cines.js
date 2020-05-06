@@ -15,9 +15,12 @@ firebase.initializeApp({
  
 
     var query = window.location.search.substring(1);
+    var array =  query.split("=");
+    alert(array[1]);
+    document.getElementById('correodelusuario').value=array[1];
     
   
-    document.getElementById('correodelusuario').value=vars[1];
+   
 
     function enviarPerfil(correo,nombre,ap,am){
         
@@ -137,7 +140,7 @@ firebase.initializeApp({
                 <div class="sala">${doc.data().nombre_sala}</div>
                 <div class="hora-inicio">${doc.data().hi}</div>
             </div>
-            <input id="idFuncion"  class="btn-comprar parisiene" value="${doc.data().id}">
+            <input type="hidden"  id="idFuncion"  class="btn-comprar parisiene" value="${doc.data().id}">
             
           
             <div class="btn-comprar parisiene" onclick="comprar()">
