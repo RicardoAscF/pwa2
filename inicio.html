@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#009975">
+  <meta name="MobileOptimized" content="width">
+  <meta name="HandheldFriendly" content="true">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="shortcut icon" type="image/png" href="madagascar.jpg">
+  <link rel="apple-touch-icon" href="movie.png">
+  <link rel="apple-touch-startup-image" href="movie.png">
+  <link rel="manifest" href="manifest.json">
+    
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/estilos_inicio.css">
+    <link rel="stylesheet" href="fontawesome/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Quicksand&display=swap" rel="stylesheet">
+    <script src="scripts/script.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-firestore.js"></script>
+    <script src="scripts/jquery.js"></script>
+
+
+    
+  
+</head>
+<body>
+    <div class="contenido">
+        <div class="titulo">
+
+           
+            <h1 id="bv" onclick="a()" class="parisiene">Bienvenido</h1>
+            
+          </div> <!--Fin DIv Titulo-->
+          <div id="msjdatosguardados" class="msj-datos-guardados .quicksand">
+                Datos Guardados
+          </div>
+        
+        <div class="secciones">
+            <div id="cont-sel" class="contenedor-select">
+                <select class="lista" name="" id="lista-ciudad" onchange="ciudad()">
+                   
+                </select>
+                <select class="lista" name="" id="lista-cine">
+                    <option value="Seleccione Un Cine"></option>
+                </select>
+                <div  onclick="buscar()" class="btn">Buscar</div>
+            </div>
+            <div id="cartelera">
+                
+        
+            </div> <!--Fin Cartelera-->
+
+
+
+
+
+            <div id="perfil">
+                   <div class="contenedor-perfil">
+                        <input id="correo-usuario" class="datos-perfil">
+                        <input id="nombre-usuario" class="datos-perfil" placeholder="Escribe tu nombre">
+                        <input id="ap-usuario" class="datos-perfil" placeholder="Estrube tu primer apellido">
+                        <input id="am-usuario" class="datos-perfil" placeholder="Escribe tu segundo apellido">
+                        <div onclick="enviar()" class="btn">Enviar</div>
+                        
+                   </div>
+            </div>
+            <div id="historial">
+                <div id="titulo-historial">
+                    
+                </div>
+
+                <!---For-->
+             
+                
+                <!---Fin For--->
+            </div>
+        </div><!--fIN Secciones--->
+        
+        
+        <nav class="menu-principal quicksand">
+            <div  class="opcion" id="cartelera-opc" >
+                <div id="menu-img-movie">
+                    <i class="fas fa-film"></i>
+                </div>
+                <div id="menu-txt-movie" class="menu-txt">
+                    Cartelera
+                </div>
+            </div>
+            <div class="opcion"  id="perfil-opc">
+                <div id="menu-img-movie">
+                    <i class="far fa-address-card"></i>
+                </div>
+                <div id="menu-txt-movie" class="menu-txt">
+                    Mi Perfil
+                </div>
+            </div>
+            <div class="opcion" id="historial-opc">
+                <div id="menu-img-movie">
+                    <i class="fas fa-money-bill-wave"></i>
+                </div>
+                <div id="menu-txt-movie" class="menu-txt">
+                    Mis Boletos
+                </div>
+            </div>
+        </nav>
+        <input type="text" id="correodelusuario">
+    </div><!--Fin Contenido-->
+  
+    <script src="scripts/funciones.js"></script>
+    <script src="scripts/cines.js"></script>
+   <script>
+       function comprar(){
+        var idFuncion = document.getElementById('idFuncion').value;
+        var  p = document.getElementById('correodelusuario').value;
+        
+        window.location.replace('sala.html?id='+idFuncion+'&'+p);
+       }
+
+       function enviar(){
+           var correo = document.getElementById('correo-usuario').value;
+           var nombre = document.getElementById('nombre-usuario').value;
+           var ap = document.getElementById('ap-usuario').value;
+           var am = document.getElementById('am-usuario').value;
+          
+          
+           enviarPerfil(correo,nombre,ap,am);
+       }
+
+   </script>
+</body>
+</html>

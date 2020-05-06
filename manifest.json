@@ -1,0 +1,23 @@
+{
+    "name": "#Cines PWA",
+    "short_name": "#Cines Ascencio",
+    "description": "Reserva Ya",
+    "background_color": "#3f4e6b",
+    "theme_color": "#3f4e6b",
+    "orientation": "portrait",
+    "display": "standalone",
+    "start_url": "./?utm_source=web_app_manifest",
+    "scope": "./",
+    "lang": "es-MX",
+    "icons": [
+      {
+        "src": "icon_1024.png",
+        "sizes": "1024x1024",
+        "type": "image/png"
+      }
+      
+      ]
+    }
+    
+    
+

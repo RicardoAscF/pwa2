@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#009975">
+  <meta name="MobileOptimized" content="width">
+  <meta name="HandheldFriendly" content="true">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="shortcut icon" type="image/png" href="movie.png">
+  <link rel="apple-touch-icon" href="movie.png">
+  <link rel="apple-touch-startup-image" href="movie.png">
+  <link rel="manifest" href="manifest.json">
+    
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/estilos_login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Quicksand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="fontawesome/css/all.css">
+    <script src="scripts/script.js"></script> 
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.7.0/firebase.js"></script>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/jquery.js"></script>
+    <script src="scripts/firebase.js"></script>
+
+    <title>CinePlus</title>
+</head>
+<body>
+    <div class="contenedor-login">
+       
+        <div id="msjdatosvacios" class="msj-datos-vacios .quicksand">
+            Llene todos los recuadros de texto
+        </div>
+        <div id="msjdatosincorrectos" class="msj-datos-incorrectos .quicksand">
+            Usuario/Contraseña incorrectos
+        </div>
+       
+        <form action="">
+            <div class="contenedor-form-login">
+                <input id="emailLogin" type="email" placeholder="Ingrese su correo" class="input-form">
+                <input id="passLogin" type="password" placeholder="Ingrese su contraseña" class="input-form">
+                
+                <a  onclick="login()" class="btn quicksand">Iniciar Sesión</a>
+                <a  href="registrar.html" class="btn quicksand">Crear Cuenta</a>
+                
+            </div>
+          
+        </form>
+        <nav class="nav-redes">
+            <a href=""><i id="face" class="fab fa-facebook-square"></i></a>
+            <a href=""><i id="insta" class="fab fa-instagram"></i></a>
+            <a href=""><i id="you" class="fab fa-youtube"></i></a>
+            <a href=""><i id="tw" class="fab fa-twitter"></i></a>
+        </nav>
+    
+    </div>
+    
+
+    <!--Scripts-->
+    <script>
+
+        
+
+        function login(){
+            
+            divDatosVacios = document.getElementById('msjdatosvacios');
+            email = document.getElementById('emailLogin').value;
+            pass = document.getElementById('passLogin').value;
+            if(email=='' || pass==""){
+                divDatosVacios.style.visibility='visible';
+            }else{
+                ingresar(email,pass);
+            }
+            
+        } 
+
+
+    </script>
+</body>
+</html>

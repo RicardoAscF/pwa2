@@ -1,0 +1,162 @@
+
+
+.contenedor-login{
+
+   
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: #3f4e6b;
+    height: 100vh;
+    border: 1px solid red;
+
+}
+
+
+
+
+
+.contenedor-form-login{
+    display: flex;
+    
+    flex-direction: column;
+    justify-content: space-around;
+    padding-top: 40px;
+    height: 40vh;
+}
+
+.contenedor-form-login input{
+    margin: 0 20px;
+}
+
+.input-form{
+    color : #FFFFFF;
+    
+    border: none;
+    font-size: 1.1rem;
+    
+}
+
+
+
+
+
+
+
+#recuperar_pass{
+    color: #FFFFFF;
+    font-size: 13px;
+    
+    text-align: center;
+}
+
+#emailLogin, #passLogin, #emailReg, #passReg, #passReg2{
+    background-color: white;
+    color: black;
+}
+
+.msj-bienvenida{
+   
+    background-color: #009975;
+    color: white;
+    text-align: center;
+    
+}
+
+
+.nav-redes a i{
+    font-size: 2.5rem;
+    
+}
+
+.nav-redes{
+    text-align: center;
+    margin-top: 20vh;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#tw{
+    background-color: white;
+    color: #00ACEE;
+    border-end-end-radius: 15px;
+    border-start-end-radius: 15px;
+    border-start-start-radius: 15px;
+    border-end-start-radius: 15px;
+
+    -webkit-border-end-end-radius: 15px;
+    -webkit-border-start-end-radius: 15px;
+    -webkit-border-start-start-radius: 15px;
+    -webkit-border-end-start-radius: 15px;
+}
+
+#you{
+    color: tomato;
+    background-color: white;
+    border-end-end-radius: 15px;
+    border-start-end-radius: 15px;
+    border-start-start-radius: 15px;
+    border-end-start-radius: 15px;
+
+    -webkit-border-end-end-radius: 15px;
+    -webkit-border-start-end-radius: 15px;
+    -webkit-border-start-start-radius: 15px;
+    -webkit-border-end-start-radius: 15px;
+}
+
+#insta{
+    color: white;
+    background-color: violet;
+    border-end-end-radius: 15px;
+    border-start-end-radius: 15px;
+    border-start-start-radius: 15px;
+    border-end-start-radius: 15px;
+
+    -webkit-border-end-end-radius: 15px;
+    -webkit-border-start-end-radius: 15px;
+    -webkit-border-start-start-radius: 15px;
+    -webkit-border-end-start-radius: 15px;
+}
+
+#face{
+    background-color: #3f4e6b;
+    color: white;
+    border-end-end-radius: 5px;
+    border-start-end-radius: 5px;
+    border-start-start-radius: 15px;
+    border-end-start-radius: 15px;
+
+    -webkit-border-end-end-radius: 15px;
+    -webkit-border-start-end-radius: 15px;
+    -webkit-border-start-start-radius: 15px;
+    -webkit-border-end-start-radius: 15px;
+}
+
+#msjbienvenida{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    visibility: hidden;
+}
+
+#msjdatosvacios,#msjdatosincorrectos,#msjpass
+,#msjformatocorreo,#msjcorreoexiste,#msjpassmin{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    visibility: hidden;
+}
+
+
+/*aaaruiii*/
+.msj-datos-vacios, .msj-datos-incorrectos, .msj-pass,
+    .msj-formato,.msj-correo,.msj-pass-min,.msjcorreo{
+    background-color: red;
+    color: white;
+    text-align: center;
+}
+
+
+
+
+

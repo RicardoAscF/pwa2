@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#009975">
+    <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="shortcut icon" type="image/png" href="madagascar.jpg">
+    <link rel="apple-touch-icon" href="movie.png">
+    <link rel="apple-touch-startup-image" href="movie.png">
+    <link rel="manifest" href="manifest.json">
+  
+    
+
+    <link rel="stylesheet" href="css/general.css">
+    <link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Quicksand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos_login.css">
+    <meta name="theme-color" content="#009975">
+  <meta name="MobileOptimized" content="width">
+  <meta name="HandheldFriendly" content="true">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <script src="scripts/script.js"></script> 
+  <link rel="shortcut icon" type="image/png" href="madagascar.jpg">
+  <link rel="apple-touch-icon" href="movie.png">
+  <link rel="apple-touch-startup-image" href="movie.png">
+  <link rel="manifest" href="manifest.json">
+
+    <script src="scripts/script.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-auth.js"></script>
+
+    <script src="scripts/jquery.js"></script>
+    <script src="scripts/firebase.js"></script>
+    <title>Registrarse</title>
+</head>
+<body>
+    <div class="contenedor-login">
+        <div id="msjdatosvacios" class="msj-datos-vacios .quicksand">
+            Llene todos los recuadros de texto
+        </div>
+        <div id="msjpass" class="msj-pass .quicksand">
+            Las contraseñas no coinciden
+        </div>
+        <div id="msjcorreoexiste" class="msj-correo .quicksand">
+            El correo ya está registrado
+        </div>
+        <div id="msjformatocorreo" class="msj-formato .quicksand">
+            Escriba un formato de correo electrónico correcto
+        </div>
+        <div id="msjpassmin" class="msj-pass-min .quicksand">
+            Escriba almenos 8 letras/numeros para su contraseña
+        </div>
+       
+        <form action="">
+            <div class="contenedor-form-login">
+                <input id="emailReg" type="email" placeholder="Ingrese su correo" class="input-form">
+                <input id="passReg" type="password" placeholder="Ingrese su contraseña" class="input-form">
+                <input id="passReg2" type="password" placeholder="Confirme su contraseña" class="input-form">
+                  
+                <a  onclick="validarVacio()" class="btn quicksand">Registrar</a>
+                <a  href="index.html" class="btn quicksand">Volver a la página anterior</a>
+            </div>
+           
+        </form>
+        
+    </div>
+    <script>
+       
+       
+          
+        function validarVacio(){
+            emailR = document.getElementById('emailReg').value;
+            passR = document.getElementById('passReg').value;
+            pass2R = document.getElementById('passReg2').value;
+            divDatosVacios = document.getElementById('msjdatosvacios');
+        
+            if(emailR=='' || passR=='' || pass2R ==''){
+                divDatosVacios.style.visibility='visible';
+            }else{
+              comprobarPass(emailR,passR,pass2R);
+            }
+        }
+
+        function comprobarPass(emailR,passR,pas2R){
+         
+            
+            divMsjPass = document.getElementById('msjpass');
+           
+            
+            if(passR==pass2R){
+                tamMin(emailR,passR,pass2R);
+            }else{
+                divMsjPass.style.visibility='visible';
+            }
+        }
+
+        function tamMin(emailR,passR,pass2R){
+            
+            divMsjPass = document.getElementById('msjpassmin');
+            if(passR.length<8){
+                divMsjPass.style.visibility='visible';
+            }else{
+                registrarUsuario(emailR,passR);
+            }
+        }
+
+
+    </script>
+</body>
+</html>

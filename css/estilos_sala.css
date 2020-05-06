@@ -1,0 +1,108 @@
+:root{
+    --fondo_gris: #3f4e6b;
+    --fondo_verde: #009975;
+    --fondo_azul: #499bea;
+    
+
+}
+
+body{
+    background-color: var(--fondo_gris);
+}
+
+.sala-cine{
+    background-color: var(--fondo_gris);
+    font-size: 1.9rem;
+    margin: 0 auto;
+}
+
+.asiento{
+    border: 1px solid white;
+    color: var(--fondo_verde);
+}
+
+.pantalla{
+    color: white;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 2REM;
+}
+
+
+
+
+.contenedor-compra{
+    border: 1px solid white;
+    background-color: var(--fondo_verde);
+    display: flex;
+    justify-content: center;
+    
+    position: absolute;
+    bottom: 30vh;
+    width: 100%;
+}
+
+.contenedor-compra a{
+    color: white;
+    text-decoration: none;
+    text-align: center; 
+  
+    width: 100%;
+    flex-basis: 50%;
+}
+
+.contenedor-compra input{
+    flex-basis: 50%;
+}
+
+.btn-cartelera{
+    /*
+    position: absolute;
+    bottom: 0;
+    left: 0;*/
+    border-end-end-radius: 15px;
+    border-start-end-radius: 15px;
+    border-start-start-radius: 15px;
+    border-end-start-radius: 15px;
+   
+}
+
+.contenedor-menu-inicio{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+#msjlimiteasientos,
+#msjasientoocupado{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    visibility: hidden;
+}
+
+.msj-datos-incorrectos,
+.msj-cinco-boletos{
+    background-color: red;
+    color: white;
+    text-align: center;
+}
+
+
+
+/*
+@media screen and (min-width: 768px){
+    .btn-cartelera{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        color: red;
+        border-end-end-radius: 15px;
+        border-start-end-radius: 15px;
+        border-start-start-radius: 15px;
+        border-end-start-radius: 15px;
+       
+    }
+}
+*/
+

@@ -1,0 +1,62 @@
+
+
+html{
+    box-sizing: border-box;
+    
+}
+
+*, *:after,*:before{
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+} 
+
+body{
+    margin: 0;
+    height: 100vh;
+    
+}
+
+a:hover{
+    cursor: pointer;
+    
+}
+
+i{
+    background-color: #009975;
+    color: #3f4e6b;
+}
+
+i:hover{
+    background-color: #3f4e6b;
+    color: #009975;
+}
+
+option{
+    font-size: 1.1rem;
+}
+
+.btn{
+    background-color: #009975;
+    border: none;
+    color: #FFFFFF;
+    font-size: 1.3rem;
+    border-end-end-radius: 15px;
+    border-start-end-radius: 15px;
+    border-start-start-radius: 15px;
+    border-end-start-radius: 15px;
+    margin: 0 20px;
+    text-align: center;
+    text-decoration: none;
+    
+    vertical-align: text-bottom;
+}   
+
+.parisiene{
+    font-family: 'Parisienne',cursive;
+}
+
+.quicksand{
+    font-family: 'Quicksand',sans-serif;
+}
+

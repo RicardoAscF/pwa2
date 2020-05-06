@@ -1,0 +1,234 @@
+:root{
+    --fondo_gris: #3f4e6b;
+    --fondo_verde: #009975;
+    --fondo_azul: #499bea;
+    
+
+}
+
+
+.contenido{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    
+}
+
+
+    /*CSS Reserva Ya*/
+
+    .titulo{
+        color: #FFFFFF;
+        display: flex;
+        justify-content: space-around;
+
+        /*
+        text-shadow: 10px 5px black;
+        */
+
+        background-color: var(--fondo_verde);
+
+        height: 6vh;
+
+    }/*Fin Titulo*/
+
+/*Fin CSS Reserva Ya*/
+
+.secciones{
+   
+    height: 82vh;
+    
+    background-color: var(--fondo_gris);
+    overflow-y: scroll;
+}
+
+    .contenedor-select{
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        
+    }
+
+    @media screen and (min-width: 768px){
+        .contenedor-select{
+            flex-direction: row;
+        }
+    }
+
+    .lista{
+        font-size: 16px;
+    }
+
+    #perfil, #historial{
+        visibility: hidden;
+    }
+
+    .contenedor-pelicula{
+       
+        margin: 4vh auto 0 auto;
+        color: #FFFFFF;
+        width: 85%;
+    }
+
+    @media screen and (min-width: 768px){
+        .contenedor-pelicula{
+            margin: 4vh auto 0 auto;
+            color: #FFFFFF;
+            width: 30%;
+        }
+    }
+
+    .contenedor-calificacion{
+        display: flex;
+       
+        justify-content: center;
+    }
+
+    .calificacion{
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .icono-calificacion i{
+        display: flex;
+        justify-content: flex-start;
+        color: yellow;
+        background-color: var(--fondo_gris);
+    }
+    .img-pelicula{
+        
+       
+        height: 30vh;
+        display: flex;
+        position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+     
+        
+    }
+
+    .img-pelicula img{
+        width: 100%;
+        border: 5px solid var(--fondo_verde);
+        border-radius: 5px;
+        justify-content: flex-end;
+    }
+
+   
+    .titulo-pelicula{
+        text-align: center;
+        font-size: 1.8rem;
+    }
+
+    .nombre-cine{
+        text-align: center;
+    }
+
+    .informacion-pelicula{
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+#perfil{
+        color: white;
+    }
+
+    .contenedor-perfil{
+        border: 1px solid red;
+    }
+
+    .datos-perfil{
+        font-family: 'Quicksand',sans-serif;
+        text-align: center;
+        font-size: 1.25rem;
+        display:block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .datos-perfil input{
+        width: 100%;
+    }
+
+    .msj-datos-guardados{
+        background-color: green;
+        color: white;
+        text-align: center;
+        border: 1px solid white;
+    }
+
+    #msjdatosguardados{
+        position: absolute;
+        width: 100%;
+        top: 0;
+        visibility: hidden;
+    }
+
+
+
+    #historial{
+        color: #FFFFFF;
+        margin-top: 5vh;
+        text-align: center;
+        
+    }
+
+    .contenido-historial{
+        margin-top: 4vh;
+        border: 5px dotted green;
+    }
+
+
+
+.menu-principal{
+   
+    display: flex;
+    height: 12vh;
+}
+
+
+    .opcion{
+        flex-basis: 33%;
+        background-color: var(--fondo_verde);
+        display: flex;
+        flex-direction: column;
+        border: 1px solid white;
+    }
+
+    .opcion:hover{
+        cursor: pointer;
+        background-color: var(--fondo_gris);
+        color: white;
+        transition: 0.8s ease-out;
+    }
+
+
+    #menu-img-movie{
+        font-size: 40px;
+        text-align: center;
+    }   
+
+    #menu-txt-movie{
+        vertical-align: top;
+        text-align: center;
+    }
+
+    .btn-comprar{
+        text-align: center;
+        -webkit-text-align: center;
+        font-size: 1.5rem;
+        text-shadow: 4px 0px black;
+        background-color: var(--fondo_verde);
+    }
+
+    #contenido-historial{
+        border: 1px solid white;
+        visibility: hidden;
+    }
+
+    .hist{
+        border: 1px solid white;
+        margin-top: 10vh;
+    }
+
+

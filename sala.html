@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Quicksand&display=swap" rel="stylesheet">
+    <meta name="theme-color" content="#009975">
+    <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="shortcut icon" type="image/png" href="madagascar.jpg">
+    <link rel="apple-touch-icon" href="movie.png">
+    <link rel="apple-touch-startup-image" href="movie.png">
+    <link rel="manifest" href="manifest.json">
+      
+    
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/estilos_sala.css">
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-firestore.js"></script>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/script.js"></script> 
+    <script src="scripts/jquery.js"></script>
+    <meta name="theme-color" content="#009975">
+  <meta name="MobileOptimized" content="width">
+  <meta name="HandheldFriendly" content="true">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="shortcut icon" type="image/png" href="madagascar.jpg">
+  <link rel="apple-touch-icon" href="movie.png">
+  <link rel="apple-touch-startup-image" href="movie.png">
+  <link rel="manifest" href="manifest.json">
+    
+
+  
+    <title>Document</title>
+</head>
+<body>
+ 
+  <div id="msjlimiteasientos" class="msj-cinco-boletos .quicksand">
+    No puedes comprar más de 5 boletos
+  </div>
+  <div id="msjasientoocupado" class="msj-datos-incorrectos .quicksand">
+    Asiento ocupado
+  </div>
+ <br>
+    <div class="contenedor-sala">
+        <div class="contenedor-asientos">
+            <table class="sala-cine">
+                <tr>
+                  <th id="A1" onclick="asientoSeleccionado(this)" class="asiento">A1</th>
+                  <th id="A2" onclick="asientoSeleccionado(this)" class="asiento">A2</th>
+                  <th id="A3" onclick="asientoSeleccionado(this)" class="asiento">A3</th>
+                  <th id="A4" onclick="asientoSeleccionado(this)" class="asiento">A4</th>
+                  <th id="A5" onclick="asientoSeleccionado(this)" class="asiento">A5</th>
+                  <th id="A6"onclick="asientoSeleccionado(this)" class="asiento">A6</th>
+                  <th id="A7"onclick="asientoSeleccionado(this)" class="asiento">A7</th>
+                  <th id="A8" onclick="asientoSeleccionado(this)" class="asiento">A8</th>
+
+                </tr>
+                <tr>
+                  <th id="B1" onclick="asientoSeleccionado(this)" class="asiento">B1</th>
+                  <th id="B2" onclick="asientoSeleccionado(this)" class="asiento">B2</th>
+                  <th id="B3" onclick="asientoSeleccionado(this)" class="asiento">B3</th>
+                  <th id="B4" onclick="asientoSeleccionado(this)" class="asiento">B4</th>
+                  <th id="B5" onclick="asientoSeleccionado(this)" class="asiento">B5</th>
+                  <th id="B6" onclick="asientoSeleccionado(this)" class="asiento">B6</th>
+                  <th id="B7" onclick="asientoSeleccionado(this)" class="asiento">B7</th>
+                  <th id="B8" onclick="asientoSeleccionado(this)" class="asiento">B8</th>
+
+                  </tr>
+                  <tr>
+                  <th onclick="asientoSeleccionado(this)" class="asiento">C1</th>
+                  <th onclick="asientoSeleccionado(this)" class="asiento">C2</th>
+                  <th onclick="asientoSeleccionado(this)" class="asiento">C3</th>
+                  <th onclick="asientoSeleccionado(this)" class="asiento">C4</th>
+                  <th onclick="asientoSeleccionado(this)" class="asiento">C5</th>
+                  <th onclick="asientoSeleccionado(this)" class="asiento">C6</th>
+                  <th onclick="asientoSeleccionado(this)" class="asiento">C7</th>
+                  <th onclick="asientoSeleccionado(this)" class="asiento">C8</th>
+
+                  </tr>
+                  <tr>
+                  <th onclick="asientoSeleccionado(this)" class="asiento">D1</th>
+                  <th onclick="asientoSeleccionado(this)" class="asiento">D2</th>
+                  <th onclick="asientoSeleccionado(this)" class="asiento">D3</th>
+                  <th onclick="asientoSeleccionado(this)" class="asiento">D4</th>
+                  <th onclick="asientoSeleccionado(this)" class="asiento">D5</th>
+                  <th onclick="asientoSeleccionado(this)" class="asiento">D6</th>
+                  <th onclick="asientoSeleccionado(this)" class="asiento">D7</th>
+                  <th onclick="asientoSeleccionado(this)" class="asiento">D8</th>
+
+                  </tr>
+                  <tr>
+                  <th onclick="asientoSeleccionado(this)" class="asiento">E1</th>
+                  <th onclick="asientoSeleccionado(this)" class="asiento">E2</th>
+                  <th onclick="asientoSeleccionado(this)" class="asiento">E3</th>
+                  <th onclick="asientoSeleccionado(this)" class="asiento">E4</th>
+                  <th onclick="asientoSeleccionado(this)" class="asiento">E5</th>
+                  <th onclick="asientoSeleccionado(this)" class="asiento">E6</th>
+                  <th onclick="asientoSeleccionado(this)" class="asiento">E7</th>
+                  <th onclick="asientoSeleccionado(this)" class="asiento">E8</th>
+
+                  </tr>
+                  <tr>
+                  <th onclick="asientoSeleccionado(this)" class="asiento">F1</th>
+                  <th onclick="asientoSeleccionado(this)" class="asiento">F2</th>
+                  <th onclick="asientoSeleccionado(this)" class="asiento">F3</th>
+                  <th onclick="asientoSeleccionado(this)" class="asiento">F4</th>
+                  <th onclick="asientoSeleccionado(this)" class="asiento">F5</th>
+                  <th onclick="asientoSeleccionado(this)" class="asiento">F6</th>
+                  <th onclick="asientoSeleccionado(this)" class="asiento">F7</th>
+                  <th onclick="asientoSeleccionado(this)" class="asiento">F8</th>
+
+                  </tr>
+
+              </table>
+
+        </div> <!--Fin Contenedor Asientos-->
+        <div class="pantalla quicksand">
+            PANTALLA
+        </div>
+        <input  id="idFun" type="text">
+        <input  id="idUsu" type="text">
+        <div class="contenedor-menu-inicio">
+        
+        </div>
+        <div class="contenedor-compra">
+            <input disabled id="asientos-escogidos" type="text">
+            <a onclick="comprarBoletos()" class="btn quicksand">Comprar</a>
+        </div>
+
+    </div>
+ 
+    <script src="scripts/funciones.js"></script>
+    
+  
+    <script src="scripts/sala.js"></script>
+</body>
+</html>
