@@ -73,6 +73,14 @@
        
           
         function validarVacio(){
+            document.getElementById('msjdatosvacios').style.visibility='hidden';
+            document.getElementById('msjpass').style.visibility='hidden';
+            document.getElementById('msjcorreoexiste').style.visibility='hidden';
+            document.getElementById('msjformatocorreo').style.visibility='hidden';
+            document.getElementById('msjpassmin').style.visibility='hidden';
+
+
+
             emailR = document.getElementById('emailReg').value;
             passR = document.getElementById('passReg').value;
             pass2R = document.getElementById('passReg2').value;

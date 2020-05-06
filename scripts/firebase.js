@@ -41,7 +41,8 @@ function registrarUsuario(email,password){
 
 
     });
-  
+    alert('Usuario Agregado');
+    window.location.replace('index.html');
 }//Fin Registrar
 
 
