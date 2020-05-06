@@ -585,7 +585,7 @@ function asientoSeleccionado(objeto){
             
           
             //comprarB(arrayAsientos);
-            alert('heer');
+         
             
             //ejemplo(idHidden+a);
        

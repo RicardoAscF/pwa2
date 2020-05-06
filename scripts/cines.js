@@ -13,14 +13,14 @@ firebase.initializeApp({
     // Variable para acceder a firebase
     var db = firebase.firestore();
  
-    alert('app abierta');
+
     var query = window.location.search.substring(1);
-    var vars = query.split("=");
+    
   
     document.getElementById('correodelusuario').value=vars[1];
 
     function enviarPerfil(correo,nombre,ap,am){
-        alert('enviarperfil3' +correo+nombre+ap+am);
+        
         db.collection("usuario")
         .doc(correo)
         .set({
@@ -156,12 +156,12 @@ firebase.initializeApp({
           }// Fin Buscar
 
     function mosper(){
-        alert('mosper');
+      
         var carteleraInicio = document.getElementById('titulo-historial');
         carteleraInicio.innerHTML = ``;
     
         var correo = document.getElementById('correodelusuario').value;
-        alert(correo); 
+  
         
         
     
@@ -191,13 +191,13 @@ firebase.initializeApp({
 
 
     function ejemplo(idFun,asientos){
-       alert("bien" +idFun +" " +asientos);
+      
        //var asientosArray = asientos.split(',');
        var asientosString = "";
        for(i=0; i<50; i++){
            asientosString+=asientos[i]+",";
        }
-       alert(asientosString);
+
 
     }
       
